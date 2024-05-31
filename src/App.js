@@ -6,7 +6,7 @@ import axios from 'axios';
 const App = () => {
   const [searchInput, setSearchInput] = useState('');
   const [images, setImages] = useState([]);
-  const [defaultImages, setDefaultImages] = useState([]);
+
 
   useEffect(() => {
     fetchDefaultImages();
@@ -17,8 +17,7 @@ const App = () => {
     const url = `https://api.unsplash.com/photos?client_id=${clientId}&page=1&per_page=24`;
     try {
       const result = await axios.get(url);
-      setDefaultImages(result.data);
-      // console.log(result.data)
+     
     
       setImages(result.data);
     } catch (error) {
@@ -30,9 +29,8 @@ const App = () => {
     e.preventDefault();
     if (searchInput) {
       fetchImages(searchInput);
-    } else {
-      setImages(defaultImages);
-    }
+   
+     }
   };
 
   const handleClick = (searchInput) => {
