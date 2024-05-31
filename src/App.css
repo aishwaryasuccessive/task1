@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap');
+
+html{
+    font-size: 100%;
+    font-family:"Lobster", "Josefin SansArial", Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px !important;
+    margin: 2rem auto;
+    padding-top: 7rem;
+
+}
+.title{
+    font-family:"Lobster", "Josefin SansArial", Helvetica, sans-serif;
+    font-size: 4rem;
+    color:#051c33;
+    font-weight: 700;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-section .search-input{
+    padding: 0.5rem 0.95rem;
+    font-size:1rem;
+    background-color: #edeff0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #d7dbdf;
+    border-right: none;
+    border-radius: 0.35rem 0 0 .35em;
+    
+    
+}
+.search-section{
+   
+    margin: 0 5rem 2rem;
+}
+.filters-button{
+    display: flex;
+   
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+}
+.filters-button button{
+    color: white;
+    background-color: #051c33;
+    border: none;
+    padding: 4px;
+    width: 100%;
+    border-radius: 3px;
+    display: block;
+    font-family:"Josefin Sans", Helvetica,Arial, sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+.submit-button{
+    padding: 0.67rem 1rem;
+    border: none;
+    color: white;
+    border-radius:0 0.35rem .35rem 0;
+    cursor: pointer;
+}
+.submit-button:disabled{
+    background-color: #f8f9fa;
+}
+.active{
+    border: none;
+    background-color: #051c33;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.images{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+
+}
+.images .image{ 
+   height: 200px;
+   width: 200px;
+  
+   
+}
+.display-input{
+    font-size: 2rem;
+        text-align: center;
+        margin: 2.5rem 0;
+        font-weight: 700;
+}
+.gitFork-attachment{
+    visibility: hidden;
+}
+    
+@media screen and (min-width: 768px) {
+    .filters-button{
+        display: flex;
+        gap: 1.25rem;
+        flex-direction: row;
+        
+        
+    }
+    .filters-button button{
+       
+        padding: 0 1rem;
+       
+    }
+    .search-section{
+        align-items: center;
+        justify-content: center;
+    }
+   .search-input{
+    width: 341px !important;
+   }
+   .fork{
+    position:absolute,
+  
+   }
+   .gitFork-attachment{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+    visibility: visible;
+   }
+ 
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+@media screen and (max-width: 470px) {
+   
+    .images{
+        justify-content: center;
+    }
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
+
+  
+  
